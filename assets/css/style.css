@@ -6,4 +6,12 @@ img{
 }
 body{
 	color: #8600b3;
+	text-align: center;
+	font-family: Georgia, serif;
+}
+#crystalsDiv{
+	padding-top: 10px;
+}
+#randomNumber{
+	
 }

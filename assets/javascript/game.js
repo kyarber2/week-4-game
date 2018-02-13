@@ -33,7 +33,7 @@ function getTotalNeededToWin() {
   		max = Math.floor(120);
   		totalNeededToWin = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
   		console.log(totalNeededToWin);
-  		$("#numberToWin").html("Total to win is: " + totalNeededToWin);
+  		$("#numberToWin").html(totalNeededToWin);
 	}
 }
 function addToCrystalTotal(num){
@@ -61,7 +61,7 @@ function addToCrystalTotal(num){
 		result = compare(crystalValueTotal, totalNeededToWin);
 		if (result !== undefined) alert (result);
 	}
-	$("#totalScore").html(crystalValueTotal);
+	$("#totalScore").html("Your current total is " +crystalValueTotal);
 }
  function compare (crystalValue, totalToWin){
  	if (crystalValue === totalToWin){

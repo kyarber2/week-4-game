@@ -8,9 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	
 
 	
 </head>
@@ -18,35 +26,35 @@
 
 <div class="container-fluid">
 	<div class="row">	
-		<div class="col-sm-6">
-			<h1> Crystals Collector!</h1>
+		<div class="col-xs-12 col-sm-6">
+			<h1 class="jumbotron"> Crystals Collector!</h1>
 			<p class="instructions"> You will be given a random number between 19-120.
 			<br>
-			There are four crystals below. Each crystal is worth a random value between 1-12. The value of each crystal is hidden from you until you click on it.
+			There are four crystals below. Each crystal is worth a random value between 1-12. The value of each crystal is hidden from you until you click on it. When you click on each crystal, its value will be added to your total score.
 			<br>
-			When you click on each crystal, its value will be added to your total score.
-			<br>
-			You win the game by mathing your total score to the random number. You lose the game if your total score goes above the random number.
-			<br>
-			Each time the game starts, the values of the crystals will change.
-			</p>
-			<p>Random Number Between 19-120</p>
+			You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. Each time the game starts, the values of the crystals will change.
+			</p>		
+		
 	
-			<p>Wins <span id="win-total"></span></p>
-			<p>Losses <span id="loss-total"></span></p>
+		
+				
+				<img onclick="assignCrystalValues(), addToCrystalTotal(1)" src="assets/images/blue-crystal.jpg" alt="blue-crystal">
+				<img onclick="assignCrystalValues(), addToCrystalTotal(2)" src="assets/images/orange-crystal.jpg" alt="orange-crystal">
+				<img onclick="assignCrystalValues(), addToCrystalTotal(3)" src="assets/images/purple-crystal.jpg" alt="purple-crystal">
+				<img onclick="assignCrystalValues(), addToCrystalTotal(4)" src="assets/images/red-crystal.jpg" alt="red-crystal">
+		</div>
+		<div class="row crystalsDiv">
+			<div class="col-xs-12 col-sm-6">
+			<h1>Total needed to win:</h1>
+			<h3 id="numberToWin"></h3>
+			<h3 id="totalScore">Your total score is: </h3>
+			<h3>Wins: <span id="win-total"></span></h3>
+			<h3>Losses: <span id="loss-total"></span></h3>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<img onclick="assignCrystalValues(), addToCrystalTotal(1)" src="assets/images/blue-crystal.jpg" alt="blue-crystal">
-			<img onclick="assignCrystalValues(), addToCrystalTotal(2)" src="assets/images/orange-crystal.jpg" alt="orange-crystal">
-			<img onclick="assignCrystalValues(), addToCrystalTotal(3)" src="assets/images/purple-crystal.jpg" alt="purple-crystal">
-			<img onclick="assignCrystalValues(), addToCrystalTotal(4)" src="assets/images/red-crystal.jpg" alt="red-crystal">
-		</div>
-	</div>
-			<p id="totalScore">Your total score is</p>
-			<p id="numberToWin"></p>
- <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+			 <script type="text/javascript" src="assets/javascript/game.js"></script>
+ 		
 </div>
 </body>
 </html>
